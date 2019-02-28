@@ -17,3 +17,6 @@ nvidia_container_t is then associated with a handful of previously declared attr
 Now with the policy installed, one can use nvidia_container_t to run GPU-aware containers:
 
     sudo docker run --security-opt label=type:nvidia_container_t --rm nvcr.io/nvidia/cuda nvidia-smi
+
+## Disclaimer
+These SELinux policies have only been verified on DGX-1 and DGX-2 on RHEL 7.5 and 7.6.  They are meant to be used as a reference for RHEL-based non-DGX platforms, not verbatim.

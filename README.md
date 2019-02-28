@@ -19,3 +19,6 @@ setools-console provides the sesearch utility, which is very useful for querying
 
 ## Information
 The src/\<policy-module-name\> directories contain the source, Makefiles, and READMEs for each policy module.  Definitions for the macros used in this project can be found in /usr/share/selinux/devel/include.
+
+## Disclaimer
+These SELinux policies have only been verified on DGX-1 and DGX-2 on RHEL 7.5 and 7.6.  They are meant to be used as a reference for RHEL-based non-DGX platforms, not verbatim.
