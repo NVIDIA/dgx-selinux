@@ -1,0 +1,1 @@
+/raid(/.*)? gen_context(system_u:object_r:cachefiles_var_t,s0)

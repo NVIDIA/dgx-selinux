@@ -1,0 +1,5 @@
+# /usr/share/selinux/devel/include
+
+policy_module(nvidia-dgxcache, 1.0)
+require { type cachefiles_var_t; }
+
