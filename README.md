@@ -17,6 +17,10 @@ setools-console provides the sesearch utility, which is very useful for querying
     sesearch --help
     sesearch --allow | grep nvidia
 
+Pre-compiled policy modules are also included in this project under the bin/ directory.  Users can install these without having to compile the policy themselves if they so desired:
+
+    sudo semodule -i nvidia-container.pp
+
 ## Information
 The src/\<policy-module-name\> directories contain the source, Makefiles, and READMEs for each policy module.  Definitions for the macros used in this project can be found in /usr/share/selinux/devel/include.
 
