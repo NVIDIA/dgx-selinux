@@ -6,6 +6,7 @@ gen_require(`
         type container_runtime_tmpfs_t;
         type xserver_exec_t;
 	type xserver_misc_device_t;
+	type xserver_t;
 
 	attribute sandbox_net_domain;
 	attribute sandbox_caps_domain;
@@ -31,5 +32,6 @@ read_files_pattern(nvidia_container_t, container_runtime_tmpfs_t, container_runt
 
 # --- running nvidia-smi
 allow nvidia_container_t xserver_exec_t:file { entrypoint execute getattr open read execute_no_trans };
+allow nvidia_container_t xserver_t:unix_stream_socket { connectto getattr read write };
 # --- alloc mem, ... /dev/nvidia*
 dev_rw_xserver_misc(nvidia_container_t)
