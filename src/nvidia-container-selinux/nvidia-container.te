@@ -33,3 +33,7 @@ read_files_pattern(nvidia_container_t, container_runtime_tmpfs_t, container_runt
 allow nvidia_container_t xserver_exec_t:file { entrypoint execute getattr open read execute_no_trans };
 # --- alloc mem, ... /dev/nvidia*
 dev_rw_xserver_misc(nvidia_container_t)
+
+
+# --- send audit messages
+logging_send_audit_msgs(nvidia_container_t)
