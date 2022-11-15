@@ -6,7 +6,23 @@ This project contains the SELinux policies used in DGX products.
 ## Building and debugging
 The policy module builds require that the following packages are installed:
 
-    sudo yum install selinux-policy selinux-policy-devel selinux-policy-base libselinux-utils policycoreutils policycoreutils-python
+    # RHEL7
+    sudo yum install -y findutils \
+                        selinux-policy \
+                        selinux-policy-devel \
+                        selinux-policy-base \
+                        libselinux-utils \
+                        policycoreutils \
+                        policycoreutils-python
+
+    # RHEL8/RHEL9
+    sudo dnf install -y findutils \
+                        selinux-policy \
+                        selinux-policy-devel \
+                        selinux-policy-base \
+                        libselinux-utils \
+                        policycoreutils \
+                        policycoreutils-python3
 
 While this is not required, it may be useful for debugging or just evaluating the various policies on the system.
 
