@@ -4,6 +4,7 @@ policy_module(nvidia-container, 0.1)
 
 gen_require(`
         type container_runtime_tmpfs_t;
+        type container_file_t;
         type xserver_exec_t;
 	type xserver_misc_device_t;
 
@@ -15,7 +16,7 @@ gen_require(`
 	attribute syslog_client_type;
 ')
 
-container_domain_template(nvidia_container)
+container_domain_template(nvidia_container, container)
 
 typeattribute nvidia_container_t sandbox_net_domain;
 typeattribute nvidia_container_t sandbox_caps_domain;
